@@ -1,15 +1,16 @@
 import React from 'react'
 import ProductData from '../data/products'
+import Button from './Button'
+import Title from './Title'
 
 const ProductList = () => {
     return (
         <div>
-            {ProductData.map((postDetail, index)=>{
+            {ProductData.map((item, index)=>{
                 return (
                     <div>
-                        <h1>{postDetail.title}</h1>
-                        <img width="200px" height="200px" src={postDetail.primaryImageUrl} />
-                        <button data-product-id={postDetail.productId}></button>
+                        <Title post={item} />
+                      <Button post={item} key={`post-list-key ${index}`} />
                     </div>
                 )
             })}

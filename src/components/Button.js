@@ -1,8 +1,9 @@
 import React from 'react'
-import ProductData from '../data/products'
 
-const Button = () => {
+const Button = (props) => {
     return (
-        <button className="btn-orange" data-product-id=""></button>
+        <button className="btn-orange" data-product-id={props.post.productId}>в корзину</button>
     )
 }
+
+export default Button
