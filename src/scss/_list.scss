@@ -1,0 +1,19 @@
+div.product-list {
+  max-width: 1440px;
+  display: grid;
+  grid-template-areas: "image header" "image header" "image buttons" "image price";
+  grid-gap: 1rem;
+  h2 {
+    font-size: 2rem;
+    grid-area: header;
+  }
+  img {
+    grid-area: image;
+  }
+  div.buttonsGroup {
+    grid-area: buttons;
+  }
+  div.prices {
+    grid-area: price;
+  }
+}

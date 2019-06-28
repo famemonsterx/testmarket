@@ -10,7 +10,7 @@ const ProductList = () => {
         <div>
             {ProductData.map((item, index)=>{
                 return (
-                    <div>
+                    <div className="product-list">
                         <Title post={item} />
                         <Button post={item} key={`post-list-key ${index}`} />
                         <Image post={item} />

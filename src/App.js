@@ -1,6 +1,6 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
 import ProductList from './components/ProductList.js'
+import './scss/App.scss'
 
 function App() {
   return (

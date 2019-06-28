@@ -1,0 +1,15 @@
+@import "list";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 10px;
+  body {
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+    grid-gap: 1rem;
+    justify-items: center;
+  }
+}
