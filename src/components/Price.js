@@ -33,8 +33,8 @@ class Price extends Component  {
             <div className="prices">
                 <p className="priceText" onClick={this.changePrice} >За м.кв</p>
                 <p className="priceText" onClick={this.changeOrigPrice}>За упаковку</p>
-                <p className="priceNum">{ price }</p>
-                <p className="priceNum">{ price }</p>
+                <p className="priceNum">{ price[0] }</p>
+                <p className="priceNum">{ price[1] }</p>
             </div>
         )
     }
