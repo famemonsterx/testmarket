@@ -8,31 +8,33 @@ class Price extends Component  {
         this.changePrice = this.changePrice.bind(this)
         this.changeOrigPrice = this.changeOrigPrice.bind(this)
         this.state = {
-            price: defaultPrice
+            price: defaultPrice,
+            price1: defaultPrice,
+            price2: origPrice
         }
     }
     changePrice(e) {
         e.preventDefault()
-        const {origPrice} = this.state
+        const { price1 } = this.state
         this.setState({
-            price: origPrice
+            price: price1
         })
     }
     changeOrigPrice(e) {
         e.preventDefault()
-        const {defaultPrice} = this.state
+        const { price2 } = this.state
         this.setState({
-            price: defaultPrice
+            price: price2
         })
     }
     render () {
         const {price} = this.state
         return (
             <div className="prices">
-                <a className="priceText" onClick={this.changePrice}>За м.кв</a>
-                <a className="priceText" onClick={this.changeOrigPrice}>За упаковку</a>
-                <span className="priceNum">{ price }</span>
-                <span className="priceNum">{ price }</span>
+                <p className="priceText" onClick={this.changePrice} >За м.кв</p>
+                <p className="priceText" onClick={this.changeOrigPrice}>За упаковку</p>
+                <p className="priceNum">{ price }</p>
+                <p className="priceNum">{ price }</p>
             </div>
         )
     }
