@@ -3,6 +3,7 @@ import ProductData from '../data/products'
 import Button from './Button'
 import Title from './Title'
 import Image from './Image'
+import Price from './Price'
 
 const ProductList = () => {
     return (
@@ -11,8 +12,9 @@ const ProductList = () => {
                 return (
                     <div>
                         <Title post={item} />
-                      <Button post={item} key={`post-list-key ${index}`} />
+                        <Button post={item} key={`post-list-key ${index}`} />
                         <Image post={item} />
+                        <Price post={item} />
                     </div>
                 )
             })}
